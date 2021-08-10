@@ -5,6 +5,11 @@ import requests
 app = Flask(__name__)
 
 
+@app.route("/")
+def home():
+    return "<h1> test home </h1>"
+
+
 # transform youtube video id into a youtube embed link and return
 @app.route("/embedlink")
 def embed_link():
